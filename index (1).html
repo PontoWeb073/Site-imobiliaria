@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Costa Dourada Imóveis | Imóveis de alto padrão no litoral sul da Bahia</title>
+  <meta name="description" content="Imóveis selecionados em Ilhéus, Itacaré e litoral sul da Bahia. Projeto demonstrativo criado pela Ponto Web.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#imoveis">Ir para os imóveis</a>
+
+  <div class="demo-bar">Site demonstrativo criado pela Ponto Web. Empresa, anúncios e contatos são fictícios.</div>
+
+  <header class="header" id="topo">
+    <a class="logo" href="#inicio" aria-label="Costa Dourada Imóveis, início">Costa <span>Dourada</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#imoveis" data-filter-type="venda">Comprar</a>
+      <a href="#imoveis" data-filter-type="temporada">Alugar</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn-gold nav-cta" href="#busca">Encontrar meu imóvel</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1800&q=75"
+           alt="Casa contemporânea de alto padrão com piscina e vegetação tropical ao entardecer" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <h1>O lugar onde a sua próxima história começa.</h1>
+        <p>Descubra imóveis selecionados no litoral sul da Bahia.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#imoveis" data-filter-type="todos">Explorar imóveis</a>
+          <button class="btn btn-ghost" type="button" data-whatsapp="Olá! Gostaria de falar com um consultor da Costa Dourada.">Falar com um consultor</button>
+        </div>
+      </div>
+
+      <form class="search" id="busca" aria-label="Buscar imóveis">
+        <label>Localização
+          <select id="fLocal">
+            <option value="todos">Todas as cidades</option>
+            <option value="ilheus">Ilhéus</option>
+            <option value="itacare">Itacaré</option>
+          </select>
+        </label>
+        <label>Tipo
+          <select id="fTipo">
+            <option value="todos">Venda e temporada</option>
+            <option value="venda">Venda</option>
+            <option value="temporada">Aluguel por temporada</option>
+          </select>
+        </label>
+        <label>Faixa de preço
+          <select id="fPreco">
+            <option value="todos">Qualquer valor</option>
+            <option value="entrada">Até R$ 1 milhão ou R$ 1.000 por noite</option>
+            <option value="alto">Acima de R$ 1 milhão ou R$ 1.000 por noite</option>
+          </select>
+        </label>
+        <button class="btn btn-green" type="submit">Buscar imóveis</button>
+      </form>
+    </section>
+
+    <!-- IMÓVEIS -->
+    <section class="section listings" id="imoveis" aria-labelledby="tImoveis">
+      <div class="section-head">
+        <h2 id="tImoveis">Imóveis em destaque</h2>
+        <p>Anúncios demonstrativos e fictícios, criados para apresentar o layout do site.</p>
+      </div>
+      <p class="result-count" id="resultCount" role="status" aria-live="polite"></p>
+
+      <div class="list" id="list">
+        <!-- Anúncio demonstrativo e fictício -->
+        <article class="property reveal" data-id="atlantico" data-local="ilheus" data-tipo="venda" data-preco="1850000">
+          <figure><img loading="lazy" width="900" height="650" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=75" alt="Casa moderna com piscina e jardim, vista externa"></figure>
+          <div class="info">
+            <p class="meta">Venda · São Miguel, Ilhéus</p>
+            <h3>Casa Atlântico</h3>
+            <p class="price">R$ 1.850.000</p>
+            <ul><li>4 quartos</li><li>Piscina</li><li>Jardim tropical</li><li>Área gourmet</li></ul>
+            <div class="actions">
+              <button class="btn btn-green" type="button" data-details="atlantico">Ver detalhes</button>
+              <button class="btn btn-line" type="button" data-whatsapp="Olá! Tenho interesse na Casa Atlântico (anúncio demonstrativo).">Pedir informações no WhatsApp</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Anúncio demonstrativo e fictício -->
+        <article class="property reveal flip" data-id="mare" data-local="ilheus" data-tipo="venda" data-preco="680000">
+          <figure><img loading="lazy" width="900" height="650" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=75" alt="Apartamento claro e amplo com sala integrada à varanda"></figure>
+          <div class="info">
+            <p class="meta">Venda · Zona Sul, Ilhéus</p>
+            <h3>Residencial Maré Alta</h3>
+            <p class="price">R$ 680.000</p>
+            <ul><li>2 quartos</li><li>Varanda com vista para o mar</li><li>Área de lazer</li></ul>
+            <div class="actions">
+              <button class="btn btn-green" type="button" data-details="mare">Ver detalhes</button>
+              <button class="btn btn-line" type="button" data-whatsapp="Olá! Tenho interesse no Residencial Maré Alta (anúncio demonstrativo).">Pedir informações no WhatsApp</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Anúncio demonstrativo e fictício -->
+        <article class="property reveal" data-id="refugio" data-local="itacare" data-tipo="temporada" data-preco="850">
+          <figure><img loading="lazy" width="900" height="650" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=75" alt="Casa de temporada com piscina privativa cercada por natureza"></figure>
+          <div class="info">
+            <p class="meta">Aluguel por temporada · Itacaré, Bahia</p>
+            <h3>Refúgio da Mata</h3>
+            <p class="price">R$ 850 <small>por noite</small></p>
+            <ul><li>3 quartos</li><li>Piscina privativa</li><li>Integração com a natureza</li></ul>
+            <div class="actions">
+              <button class="btn btn-green" type="button" data-details="refugio">Ver detalhes</button>
+              <button class="btn btn-line" type="button" data-whatsapp="Olá! Tenho interesse no Refúgio da Mata (anúncio demonstrativo).">Pedir informações no WhatsApp</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty" id="empty" hidden>
+        <p>Nenhum imóvel corresponde a esses filtros.</p>
+        <button class="btn btn-green" type="button" id="clearFilters">Limpar filtros</button>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section about" id="sobre" aria-labelledby="tSobre">
+      <div class="about-text reveal">
+        <h2 id="tSobre">Mais do que imóveis, encontramos o seu lugar no mundo.</h2>
+        <p>A Costa Dourada nasceu da vontade de tornar a busca por um imóvel no litoral sul da Bahia mais próxima e mais cuidadosa. Conversamos com cada cliente, entendemos o que ele procura e apresentamos poucas opções, escolhidas com critério.</p>
+        <p>Conhecemos as ruas, as praias e os ritmos de Ilhéus e Itacaré, e usamos esse conhecimento para orientar famílias, investidores e quem sonha em viver perto do mar.</p>
+      </div>
+      <dl class="pillars reveal">
+        <div><dt>Curadoria de imóveis</dt><dd>Só entram no portfólio imóveis visitados, avaliados e com documentação analisada.</dd></div>
+        <div><dt>Atendimento personalizado</dt><dd>Um consultor acompanha você da primeira conversa até a entrega das chaves.</dd></div>
+        <div><dt>Conhecimento regional</dt><dd>Informações reais sobre bairros, acessos, valorização e rotina em cada praia.</dd></div>
+      </dl>
+    </section>
+
+    <!-- ESTILO DE VIDA -->
+    <section class="lifestyle" aria-labelledby="tVida">
+      <h2 id="tVida">A vida que você imagina pode começar aqui.</h2>
+      <div class="mosaic">
+        <figure class="m1"><img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=70" alt="Praia tropical de águas claras com coqueiros"></figure>
+        <figure class="m2"><img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=70" alt="Arquitetura contemporânea com grandes janelas e jardim"></figure>
+        <figure class="m3"><img loading="lazy" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=70" alt="Sala de estar contemporânea com luz natural"></figure>
+        <figure class="m4"><img loading="lazy" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=70" alt="Faixa de areia e mar ao entardecer"></figure>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="tCta">
+      <h2 id="tCta">Vamos encontrar o imóvel ideal para você?</h2>
+      <button class="btn btn-gold" type="button" data-whatsapp="Olá! Gostaria de conversar com a equipe da Costa Dourada.">Fale com nossa equipe</button>
+    </section>
+  </main>
+
+  <footer class="footer" id="contato">
+    <div class="foot-brand">
+      <a class="logo" href="#inicio">Costa <span>Dourada</span></a>
+      <p>Seu próximo capítulo começa aqui.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <a href="#inicio">Início</a>
+      <a href="#imoveis" data-filter-type="venda">Comprar</a>
+      <a href="#imoveis" data-filter-type="temporada">Alugar</a>
+      <a href="#sobre">Sobre nós</a>
+    </nav>
+    <address>
+      <p>Atuação: Ilhéus, Itacaré e litoral sul da Bahia</p>
+      <p>Atendimento (demonstrativo): seg. a sex., 9h às 18h</p>
+      <p>Telefone: (00) 00000-0000 <em>placeholder</em></p>
+      <p>E-mail: contato@exemplo.com <em>placeholder</em></p>
+      <p>CRECI: não informado (projeto demonstrativo)</p>
+    </address>
+    <p class="legal">Projeto demonstrativo desenvolvido pela Ponto Web. Empresa, imóveis, preços e contatos são fictícios. Fotografias: Unsplash.</p>
+  </footer>
+
+  <!-- Janela de detalhes -->
+  <dialog id="modal" aria-labelledby="mTitle">
+    <button class="modal-close" type="button" id="modalClose" aria-label="Fechar detalhes">Fechar</button>
+    <h3 id="mTitle"></h3>
+    <p class="meta" id="mMeta"></p>
+    <p id="mText"></p>
+    <p class="price" id="mPrice"></p>
+    <p class="demo-note">Anúncio demonstrativo e fictício.</p>
+    <button class="btn btn-green" type="button" id="mWhats">Pedir informações no WhatsApp</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
